@@ -1,0 +1,7 @@
+{
+  "name": "The Sunset Valley Hotel",
+  "description": "Luxurious cabin hotel experience with integrated AI assistants for info, booking calls, and chat support.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
