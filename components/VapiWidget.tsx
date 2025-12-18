@@ -1,5 +1,7 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Activity, Loader2 } from "lucide-react";
+import Vapi from "@vapi-ai/web";
 
 const VAPI_ASSISTANT_ID = "b82c8f2a-329a-4291-b864-e2665ea0fbc7";
 const VAPI_API_KEY = "c8f26175-da13-45b1-b16a-fc9b18e4470b";
