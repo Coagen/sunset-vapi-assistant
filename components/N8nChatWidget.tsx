@@ -14,7 +14,7 @@ const N8nChatWidget: React.FC<Props> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (!isOpen) return;
-    
+
     // Check if we need to init
     if (chatInitialized.current) return;
 
@@ -57,22 +57,27 @@ const N8nChatWidget: React.FC<Props> = ({ isOpen, onClose }) => {
     <div
       className={`fixed inset-0 z-[200] flex items-center justify-center p-4
       bg-black/60 backdrop-blur-md transition-opacity duration-300 ${
-        isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        isOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className={`bg-white rounded-2xl shadow-2xl w-full max-w-md h-[800px] overflow-hidden flex flex-col transform transition-transform duration-300 ${isOpen ? 'scale-100' : 'scale-95'}`}>
-        
+      <div
+        className={`bg-white rounded-2xl shadow-2xl w-full max-w-md h-[800px] overflow-hidden flex flex-col transform transition-transform duration-300 ${
+          isOpen ? "scale-100" : "scale-95"
+        }`}
+      >
         {/* Header */}
         <div className="bg-brand-navy p-4 flex justify-between items-center text-white shrink-0">
           <div className="flex flex-col">
             <h3 className="font-serif font-bold text-lg">Booking Chatbot</h3>
-           
           </div>
 
           <button
             onClick={onClose}
             aria-label="Close chat"
-            className="hover:bg-white/10 p-2 rounded-full transition-colors text-white/80 hover:text-white">
+            className="hover:bg-white/10 p-2 rounded-full transition-colors text-white/80 hover:text-white"
+          >
             <X className="w-6 h-6" />
           </button>
         </div>
